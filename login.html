@@ -1,0 +1,76 @@
+<?php
+$cn=mysqli_connect('localhost','root','root','users');
+$qry="select * from user_table";
+$fr=mysqli_query($cn,$qry);
+if($r=mysqli_fetch_array($fr))
+{
+	$u=$r['username'];
+	$p=$r['password'];
+}
+if($_POST['submit'])
+{
+	$username=$_POST['user'];
+	$pwd=$_POST['password'];
+}
+if($username==$u && $pwd==$p)
+{
+	header('Location:login.php');
+}
+else
+{
+	echo 'Incorrect user';
+}
+?>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>
+LOGIN</title>
+<link rel="icon" href="ccct_logo.PNG" type="image/PNG" sizes="7x7">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<form class="box" action="index.html" method="post">
+		<h1>Login</h1>
+		<input type="text" name="user" placeholder="username">
+		<input type="password" name="password" placeholder="password">
+		<input type="submit" name=""value="login" >
+	</form>
+	
+	
+<div id="leaves">
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>   
+</div>
+
+</body>
+</html>
